@@ -132,10 +132,6 @@ temp/
 # Supabase
 .supabase/
 
-# WordPress theme (if it contains build artifacts)
-wordpress-theme/build/
-wordpress-theme/dist/
-wordpress-theme/node_modules/
 
 # Local development
 *.local 

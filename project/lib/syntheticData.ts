@@ -179,7 +179,7 @@ export function generateSyntheticAssessmentData(url: string): SyntheticAssessmen
       userExperienceScore: 74,
       contentQualityScore: 65
     },
-    recommendations: generateRecommendations(),
+    recommendations: generateRecommendations(72, 58, 74, 65),
     createdAt: new Date(Date.now() - 300000).toISOString(), // 5 minutes ago
     completedAt: new Date().toISOString()
   };
