@@ -16,17 +16,30 @@ console.log('🔍 Environment check:', {
 // Check if environment variables are properly configured
 if (!supabaseUrl || supabaseUrl.includes('placeholder')) {
   console.error('❌ NEXT_PUBLIC_SUPABASE_URL is not configured properly')
-  throw new Error('Supabase URL is not configured. Please set NEXT_PUBLIC_SUPABASE_URL in your .env.local file')
+  if (process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
+    // During build time, allow placeholder values
+    console.warn('⚠️ Using placeholder Supabase URL for build process')
+  } else {
+    throw new Error('Supabase URL is not configured. Please set NEXT_PUBLIC_SUPABASE_URL in your .env.local file')
+  }
 }
 
 if (!supabaseServiceKey || supabaseServiceKey.includes('placeholder')) {
   console.error('❌ SUPABASE_SERVICE_ROLE_KEY is not configured properly')
-  throw new Error('Supabase Service Role Key is not configured. Please set SUPABASE_SERVICE_ROLE_KEY in your .env.local file')
+  if (process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
+    console.warn('⚠️ Using placeholder service key for build process')
+  } else {
+    throw new Error('Supabase Service Role Key is not configured. Please set SUPABASE_SERVICE_ROLE_KEY in your .env.local file')
+  }
 }
 
 if (!supabaseAnonKey || supabaseAnonKey.includes('placeholder')) {
   console.error('❌ NEXT_PUBLIC_SUPABASE_ANON_KEY is not configured properly')
-  throw new Error('Supabase Anon Key is not configured. Please set NEXT_PUBLIC_SUPABASE_ANON_KEY in your .env.local file')
+  if (process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
+    console.warn('⚠️ Using placeholder anon key for build process')
+  } else {
+    throw new Error('Supabase Anon Key is not configured. Please set NEXT_PUBLIC_SUPABASE_ANON_KEY in your .env.local file')
+  }
 }
 
 // Server-side client (for API routes) with additional configuration

@@ -427,7 +427,7 @@ function generateUserJourneyData(): UserJourneyData {
 }
 
 function generateRecommendations(seoScore: number, aiScore: number, uxScore: number, contentScore: number): RecommendationData[] {
-  const recommendations = [];
+  const recommendations: RecommendationData[] = [];
 
   if (seoScore < 70) {
     recommendations.push({
