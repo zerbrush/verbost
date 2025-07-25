@@ -291,12 +291,12 @@ function generateAssessmentAdminEmail(data: AssessmentEmailData): string {
             
             ${category?.findings && category.findings.length > 0 ? `
             <p style="font-weight: bold; margin: 10px 0 5px 0;">🔍 Key Findings:</p>
-            ${category.findings.map(finding => `<div class="finding">${finding}</div>`).join('')}
+            ${category.findings.map((finding: any) => `<div class="finding">${finding}</div>`).join('')}
             ` : ''}
             
             ${category?.recommendations && category.recommendations.length > 0 ? `
             <p style="font-weight: bold; margin: 15px 0 5px 0;">✅ Recommendations:</p>
-            ${category.recommendations.slice(0, 3).map(rec => {
+            ${category.recommendations.slice(0, 3).map((rec: any) => {
               const priorityClass = rec.priority === 'High' ? 'priority-high' : rec.priority === 'Medium' ? 'priority-medium' : 'priority-low';
               return `
               <div class="recommendation ${priorityClass}">

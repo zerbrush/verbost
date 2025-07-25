@@ -54,11 +54,11 @@ export async function POST(request: NextRequest) {
     console.log('💾 Creating assessment in Supabase...');
     try {
       await createAssessment(assessmentData);
-    } catch (dbError) {
+    } catch (dbError: any) {
       console.error('❌ Database creation failed:', dbError);
       return NextResponse.json({ 
         error: 'Failed to create assessment in database',
-        details: dbError.message,
+        details: dbError?.message || 'Unknown database error',
         code: 'DATABASE_ERROR'
       }, { status: 500 });
     }
@@ -257,7 +257,7 @@ function isValidUrl(url: string): boolean {
   try {
     const urlObj = new URL(url);
     const isValidProtocol = urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
-    const hasValidHostname = urlObj.hostname && urlObj.hostname.includes('.');
+    const hasValidHostname = Boolean(urlObj.hostname && urlObj.hostname.includes('.'));
     return isValidProtocol && hasValidHostname;
   } catch {
     return false;

@@ -261,9 +261,9 @@ function parseAnalysisResponse(response: string, category: string): AssessmentCa
     
     return parsed;
     
-  } catch (error) {
-    console.error(`Failed to parse ${category} response:`, error.message);
-    throw new Error(`Failed to parse ${category} analysis: ${error.message}`);
+  } catch (error: any) {
+    console.error(`Failed to parse ${category} response:`, error?.message || error);
+    throw new Error(`Failed to parse ${category} analysis: ${error?.message || 'Unknown error'}`);
   }
 }
 
@@ -431,13 +431,25 @@ function calculateGrade(score: number): string {
   return 'F';
 }
 
-function generateKeyInsights(results: any, overallScore: number) {
-  const insights = [];
+function generateKeyInsights(results: any, overallScore: number): Array<{
+  type: 'positive' | 'opportunity' | 'action';
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+}> {
+  const insights: Array<{
+    type: 'positive' | 'opportunity' | 'action';
+    title: string;
+    description: string;
+    icon: string;
+    color: string;
+  }> = [];
   
   // Strong foundation insight
   if (overallScore >= 70) {
     insights.push({
-      type: 'positive',
+      type: 'positive' as const,
       title: 'Strong AI-Ready Foundation',
       description: 'Your website demonstrates good fundamentals for AI platform optimization. With targeted improvements, you can achieve excellent AI visibility.',
       icon: 'check-circle',
@@ -449,7 +461,7 @@ function generateKeyInsights(results: any, overallScore: number) {
   const lowestCategory = Object.entries(results)
     .sort((a: any, b: any) => (a[1].score || 0) - (b[1].score || 0))[0];
   
-  if (lowestCategory && lowestCategory[1].score < 70) {
+  if (lowestCategory && (lowestCategory[1] as any).score < 70) {
     const categoryNames: Record<string, string> = {
       structuredData: 'structured data optimization',
       contentQuality: 'content AI compatibility',
@@ -458,7 +470,7 @@ function generateKeyInsights(results: any, overallScore: number) {
     };
     
     insights.push({
-      type: 'opportunity',
+      type: 'opportunity' as const,
       title: 'Primary Optimization Opportunity',
       description: `Your ${categoryNames[lowestCategory[0]]} presents the biggest opportunity for improvement. Addressing this could significantly boost your AI platform visibility.`,
       icon: 'lightbulb',
@@ -473,7 +485,7 @@ function generateKeyInsights(results: any, overallScore: number) {
   
   if (quickWins.length > 0) {
     insights.push({
-      type: 'action',
+      type: 'action' as const,
       title: 'Quick Wins Available',
       description: `We identified ${quickWins.length} high-impact improvements that are easy to implement. These could boost your AI-readiness score by 15-25 points.`,
       icon: 'trending-up',

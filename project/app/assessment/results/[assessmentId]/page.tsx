@@ -480,10 +480,15 @@ export default function AssessmentResultsPage({ params }: { params: { assessment
                           Recommendations
                         </h4>
                         <ul className="space-y-2">
-                          {category.recommendations.map((recommendation: string, index: number) => (
+                          {category.recommendations.map((recommendation: any, index: number) => (
                             <li key={index} className="flex items-start">
                               <CheckCircle className="h-4 w-4 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                              <span className="text-navy/70">{typeof recommendation === 'string' ? recommendation : recommendation.description || recommendation.title || 'Recommendation'}</span>
+                              <span className="text-navy/70">
+                                {typeof recommendation === 'string' 
+                                  ? recommendation 
+                                  : (recommendation?.description || recommendation?.title || 'Recommendation')
+                                }
+                              </span>
                             </li>
                           ))}
                         </ul>

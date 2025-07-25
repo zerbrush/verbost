@@ -272,10 +272,10 @@ export default function CookiePolicyPage() {
                 
                 <h3 className="text-xl font-semibold text-navy mb-3">Browser-Specific Instructions</h3>
                 <ul className="list-disc pl-6 mb-6 space-y-2">
-                  <li><strong>Chrome:</strong> Settings > Privacy and security > Cookies and other site data</li>
-                  <li><strong>Firefox:</strong> Settings > Privacy & Security > Cookies and Site Data</li>
-                  <li><strong>Safari:</strong> Preferences > Privacy > Manage Website Data</li>
-                  <li><strong>Edge:</strong> Settings > Cookies and site permissions > Cookies and site data</li>
+                  <li><strong>Chrome:</strong> Settings &gt; Privacy and security &gt; Cookies and other site data</li>
+                  <li><strong>Firefox:</strong> Settings &gt; Privacy &amp; Security &gt; Cookies and Site Data</li>
+                  <li><strong>Safari:</strong> Preferences &gt; Privacy &gt; Manage Website Data</li>
+                  <li><strong>Edge:</strong> Settings &gt; Cookies and site permissions &gt; Cookies and site data</li>
                 </ul>
                 
                 <h3 className="text-xl font-semibold text-navy mb-3">Opt-Out Tools</h3>
