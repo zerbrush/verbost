@@ -1,7 +1,7 @@
 import sgMail from '@sendgrid/mail';
 
 // Initialize SendGrid
-sgMail.setApiKey(process.env.SENDGRID_API_KEY || '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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
 
 const FROM_EMAIL = 'report@verbost.ai';
 const ADMIN_EMAIL = 'hmzerbe@gmail.com';

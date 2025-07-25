@@ -10,40 +10,51 @@ console.log('🔍 Environment check:', {
   hasAnonKey: !!supabaseAnonKey,
   hasServiceKey: !!supabaseServiceKey,
   urlPrefix: supabaseUrl ? supabaseUrl.substring(0, 20) + '...' : 'missing',
-  nodeEnv: process.env.NODE_ENV
+  nodeEnv: process.env.NODE_ENV,
+  isConfigured: !!(supabaseUrl && supabaseAnonKey && supabaseServiceKey && 
+                   !supabaseUrl.includes('placeholder') && 
+                   !supabaseAnonKey.includes('placeholder') && 
+                   !supabaseServiceKey.includes('placeholder'))
 })
 
 // Check if environment variables are properly configured
 if (!supabaseUrl || supabaseUrl.includes('placeholder')) {
-  console.error('❌ NEXT_PUBLIC_SUPABASE_URL is not configured properly')
-  if (process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
-    // During build time, allow placeholder values
-    console.warn('⚠️ Using placeholder Supabase URL for build process')
+  console.warn('⚠️ NEXT_PUBLIC_SUPABASE_URL is not configured properly')
+  if (process.env.NODE_ENV === 'development') {
+    console.warn('⚠️ Using fallback in-memory storage for development - API features will work but data will not persist')
   } else {
-    throw new Error('Supabase URL is not configured. Please set NEXT_PUBLIC_SUPABASE_URL in your .env.local file')
+    console.error('❌ Supabase URL is not configured. Please set NEXT_PUBLIC_SUPABASE_URL in your .env.local file')
   }
 }
 
 if (!supabaseServiceKey || supabaseServiceKey.includes('placeholder')) {
-  console.error('❌ SUPABASE_SERVICE_ROLE_KEY is not configured properly')
-  if (process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
-    console.warn('⚠️ Using placeholder service key for build process')
+  console.warn('⚠️ SUPABASE_SERVICE_ROLE_KEY is not configured properly')
+  if (process.env.NODE_ENV === 'development') {
+    console.warn('⚠️ Using fallback in-memory storage for development - API features will work but data will not persist')
   } else {
-    throw new Error('Supabase Service Role Key is not configured. Please set SUPABASE_SERVICE_ROLE_KEY in your .env.local file')
+    console.error('❌ Supabase Service Role Key is not configured. Please set SUPABASE_SERVICE_ROLE_KEY in your .env.local file')
   }
 }
 
 if (!supabaseAnonKey || supabaseAnonKey.includes('placeholder')) {
-  console.error('❌ NEXT_PUBLIC_SUPABASE_ANON_KEY is not configured properly')
-  if (process.env.NODE_ENV === 'production' && typeof window === 'undefined') {
-    console.warn('⚠️ Using placeholder anon key for build process')
+  console.warn('⚠️ NEXT_PUBLIC_SUPABASE_ANON_KEY is not configured properly')
+  if (process.env.NODE_ENV === 'development') {
+    console.warn('⚠️ Using fallback in-memory storage for development - API features will work but data will not persist')
   } else {
-    throw new Error('Supabase Anon Key is not configured. Please set NEXT_PUBLIC_SUPABASE_ANON_KEY in your .env.local file')
+    console.error('❌ Supabase Anon Key is not configured. Please set NEXT_PUBLIC_SUPABASE_ANON_KEY in your .env.local file')
   }
 }
 
+// Check if Supabase is properly configured
+const isSupabaseConfigured = supabaseUrl && 
+                            supabaseAnonKey && 
+                            supabaseServiceKey && 
+                            !supabaseUrl.includes('placeholder') && 
+                            !supabaseAnonKey.includes('placeholder') && 
+                            !supabaseServiceKey.includes('placeholder')
+
 // Server-side client (for API routes) with additional configuration
-export const supabaseServer = createClient(supabaseUrl, supabaseServiceKey, {
+export const supabaseServer = isSupabaseConfigured ? createClient(supabaseUrl, supabaseServiceKey, {
   auth: {
     autoRefreshToken: false,
     persistSession: false
@@ -56,10 +67,10 @@ export const supabaseServer = createClient(supabaseUrl, supabaseServiceKey, {
       'X-Client-Info': 'verbost-api'
     }
   }
-})
+}) : null
 
 // Client-side client (for frontend) with additional configuration
-export const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
+export const supabaseClient = isSupabaseConfigured ? createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     autoRefreshToken: true,
     persistSession: true
@@ -67,6 +78,10 @@ export const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
   db: {
     schema: 'public'
   }
-})
+}) : null
 
-console.log('✅ Supabase clients initialized successfully')
+if (isSupabaseConfigured) {
+  console.log('✅ Supabase clients initialized successfully')
+} else {
+  console.log('⚠️ Supabase not configured - using fallback storage')
+}

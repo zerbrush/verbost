@@ -15,6 +15,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://verbost.ai'),
   title: 'Verbost.ai - AI-Driven Website Optimization Agency',
   description: 'The agency built for the AI future. AI-driven website assessments, content strategy, and ongoing monitoring to ensure your business thrives in search engines and AI platforms.',
   keywords: 'AI SEO, website optimization, AI-driven content, search engine optimization, website assessment, MCP server hosting, digital marketing agency',
