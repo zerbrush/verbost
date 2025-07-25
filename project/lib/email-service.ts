@@ -1,10 +1,16 @@
 import sgMail from '@sendgrid/mail';
 
-// Initialize SendGrid
-sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
+// Initialize SendGrid with better error handling
+const sendgridApiKey = process.env.SENDGRID_API_KEY;
+if (!sendgridApiKey) {
+  console.error('❌ SENDGRID_API_KEY environment variable is not set');
+} else {
+  console.log('✅ SendGrid API key found, initializing...');
+  sgMail.setApiKey(sendgridApiKey);
+}
 
 const FROM_EMAIL = 'report@verbost.ai';
-const ADMIN_EMAIL = 'hmzerbe@gmail.com';
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'hmzerbe@gmail.com';
 
 export interface AssessmentEmailData {
   userEmail: string;
@@ -36,6 +42,16 @@ export interface ContactFormData {
 
 export async function sendAssessmentCompletionEmail(data: AssessmentEmailData) {
   try {
+    // Check if SendGrid is properly configured
+    if (!process.env.SENDGRID_API_KEY) {
+      console.error('❌ SENDGRID_API_KEY not configured - skipping email sending');
+      return { success: false, error: 'SendGrid not configured' };
+    }
+
+    console.log('📧 Attempting to send assessment completion emails...');
+    console.log('📧 To user:', data.userEmail);
+    console.log('📧 To admin:', ADMIN_EMAIL);
+
     // Email to user with their assessment report
     const userMsg = {
       to: data.userEmail,
@@ -52,21 +68,37 @@ export async function sendAssessmentCompletionEmail(data: AssessmentEmailData) {
       html: generateAssessmentAdminEmail(data)
     };
 
-    await Promise.all([
+    const results = await Promise.all([
       sgMail.send(userMsg),
       sgMail.send(adminMsg)
     ]);
 
     console.log('✅ Assessment emails sent successfully');
+    console.log('📧 SendGrid response:', results);
     return { success: true };
-  } catch (error) {
+  } catch (error: any) {
     console.error('❌ Failed to send assessment emails:', error);
-    throw error;
+    console.error('❌ Error details:', {
+      message: error.message,
+      code: error.code,
+      response: error.response?.body
+    });
+    return { success: false, error: error.message };
   }
 }
 
 export async function sendContactFormEmails(data: ContactFormData) {
   try {
+    // Check if SendGrid is properly configured
+    if (!process.env.SENDGRID_API_KEY) {
+      console.error('❌ SENDGRID_API_KEY not configured - skipping email sending');
+      return { success: false, error: 'SendGrid not configured' };
+    }
+
+    console.log('📧 Attempting to send contact form emails...');
+    console.log('📧 From user:', data.email);
+    console.log('📧 To admin:', ADMIN_EMAIL);
+
     // Email to admin about new contact form submission
     const adminMsg = {
       to: ADMIN_EMAIL,
@@ -83,16 +115,22 @@ export async function sendContactFormEmails(data: ContactFormData) {
       html: generateContactUserEmail(data)
     };
 
-    await Promise.all([
+    const results = await Promise.all([
       sgMail.send(adminMsg),
       sgMail.send(userMsg)
     ]);
 
     console.log('✅ Contact form emails sent successfully');
+    console.log('📧 SendGrid response:', results);
     return { success: true };
-  } catch (error) {
+  } catch (error: any) {
     console.error('❌ Failed to send contact form emails:', error);
-    throw error;
+    console.error('❌ Error details:', {
+      message: error.message,
+      code: error.code,
+      response: error.response?.body
+    });
+    return { success: false, error: error.message };
   }
 }
 

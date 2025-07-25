@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Send emails
-    await sendContactFormEmails({
+    const emailResult = await sendContactFormEmails({
       name: name.trim(),
       email: email.trim(),
       company: formData.company?.trim(),
@@ -27,7 +27,12 @@ export async function POST(request: NextRequest) {
       budget: formData.budget?.trim()
     });
 
-    console.log('✅ Contact form emails sent successfully');
+    if (!emailResult.success) {
+      console.warn('⚠️ Email sending failed:', emailResult.error);
+      // Still return success to user, but log the email issue
+    }
+
+    console.log('✅ Contact form processed successfully');
 
     return NextResponse.json({
       success: true,
