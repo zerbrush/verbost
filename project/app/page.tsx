@@ -150,6 +150,28 @@ export default function HomePage() {
     }
   ];
 
+  const urgencyIndicators = [
+    {
+      icon: <AlertTriangle className="h-6 w-6 text-red-500" />,
+      title: "Traffic Decline Accelerating",
+      description: "AI Overviews are expanding to more query types monthly"
+    },
+    {
+      icon: <TrendingUp className="h-6 w-6 text-orange-500" />,
+      title: "Competitive Advantages Compounding",
+      description: "Early AI optimization creates lasting market advantages"
+    },
+    {
+      icon: <Cpu className="h-6 w-6 text-purple-500" />,
+      title: "Technical Complexity Increasing",
+      description: "AI requirements become more sophisticated as systems evolve"
+    },
+    {
+      icon: <Users className="h-6 w-6 text-blue-500" />,
+      title: "Customer Behavior Shifting",
+      description: "Users increasingly rely on AI for discovery and decision-making"
+    }
+  ];
 
   const testimonials = [
     {
