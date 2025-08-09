@@ -69,15 +69,13 @@ export default function RootLayout({
       <head>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BJZ9CPCGBK"></Script>
         <Script id="google-analytics">
-          {
-            '
+          {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-            gtag('config', 'G-BJZ9CPCGBK');
-            '
-          }
+          gtag('config', 'G-BJZ9CPCGBK');
+          `}
         </Script>
       </head>
       <body className={`${poppins.variable} ${roboto.variable} font-poppins`}>
