@@ -480,7 +480,6 @@ export default function ContactPage() {
                 The agency built for the AI future. We help businesses optimize their websites for both traditional search engines and emerging AI platforms.
               </p>
               <div className="flex items-center space-x-2 text-white/70">
-                <Headphones className="h-4 w-4" />
               </div>
             </div>
             
