@@ -21,7 +21,12 @@ import {
   Lightbulb,
   Mail,
   Menu,
-  X
+  X,
+  AlertTriangle,
+  Award,
+  Eye,
+  Cpu,
+  Activity
 } from 'lucide-react';
 import Link from 'next/link';
 
