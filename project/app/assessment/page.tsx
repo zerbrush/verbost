@@ -111,24 +111,21 @@ export default function AIReadinessAssessment() {
                 </div>
                 <span className="text-xl font-bold text-navy">Verbost</span>
               </Link>
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-8">
-                  <Link href="/services" className="text-navy/70 hover:text-coral px-3 py-2 text-sm font-medium transition-colors">
-                    Services
-                  </Link>
-                  <Link href="/assessment" className="text-coral px-3 py-2 text-sm font-medium">
-                    AI-Readiness Assessment
-                  </Link>
-                  <Link href="/about" className="text-navy/70 hover:text-coral px-3 py-2 text-sm font-medium transition-colors">
-                    About
-                  </Link>
-                  <Link href="/resources" className="text-navy/70 hover:text-coral px-3 py-2 text-sm font-medium transition-colors">
-                    Resources
-                  </Link>
-                  <Link href="/contact" className="text-navy/70 hover:text-coral px-3 py-2 text-sm font-medium transition-colors">
-                    Contact
-                  </Link>
-                </div>
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-8">
+                <Link href="/services" className="text-navy/70 hover:text-coral px-3 py-2 text-sm font-medium transition-colors">
+                  Services
+                </Link>
+                <Link href="/assessment" className="text-coral px-3 py-2 text-sm font-medium">
+                  AI-Readiness Assessment
+                </Link>
+                <Link href="/about" className="text-navy/70 hover:text-coral px-3 py-2 text-sm font-medium transition-colors">
+                  About
+                </Link>
+                <Link href="/contact" className="text-navy/70 hover:text-coral px-3 py-2 text-sm font-medium transition-colors">
+                  Contact
+                </Link>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -143,11 +140,11 @@ export default function AIReadinessAssessment() {
                 </Button>
               </div>
               <div className="hidden md:block">
-                <Link href="/assessment">
-                  <Button size="sm" className="btn-primary">
-                    Get Started
-                  </Button>
-                </Link>
+              <Link href="/assessment">
+                <Button size="sm" className="btn-primary">
+                  Get Started
+                </Button>
+              </Link>
               </div>
             </div>
           </div>
@@ -177,13 +174,6 @@ export default function AIReadinessAssessment() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About
-              </Link>
-              <Link 
-                href="/resources" 
-                className="text-navy/70 hover:text-coral block px-3 py-2 text-base font-medium transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Resources
               </Link>
               <Link 
                 href="/contact" 

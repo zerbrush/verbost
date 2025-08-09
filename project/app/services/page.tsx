@@ -23,7 +23,8 @@ import {
   Headphones,
   Mail,
   Menu,
-  X
+  X,
+  Building
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -260,17 +261,17 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge className="mb-4 badge-coral">
-              Our Services
+              Strategic Consulting
             </Badge>
             <h1 className="mb-6">
-              Comprehensive Website AI Optimization Services
+              AI-Readiness Website Transformation
             </h1>
             <p className="body-text mb-8 max-w-3xl mx-auto">
-              From comprehensive assessments to complete optimization, we provide everything you need to succeed in the AI-driven digital landscape
+              Strategic partnership for sustainable competitive advantage in the post-search economy
             </p>
             <Button size="lg" className="btn-primary">
               <Link href="/contact">
-                Schedule Consultation
+                Schedule Strategic Consultation
               </Link>
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -283,200 +284,211 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="mb-4">
-              Choose Your Optimization Level
+              Strategic AI-Readiness Services
             </h2>
             <p className="body-text max-w-3xl mx-auto">
-              Select the service level that best fits your needs and budget. Each tier provides increasing value and comprehensive optimization.
+              Bespoke strategic solutions designed for your industry, competitive environment, and transformation objectives.
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Tier 1 */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Service 1 */}
             <Card className="card hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-coral/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-coral/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Search className="h-8 w-8 text-coral" />
                   </div>
-                  <CardTitle className="text-lg text-navy">AI-Readiness Audit</CardTitle>
-                  <p className="text-coral font-medium mt-2">Perfect for businesses starting their AI journey</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-navy mb-2">$497</div>
-                  <Badge variant="outline" className="mt-2 border-coral/20 text-coral">
-                    5-7 business days
-                  </Badge>
+                  <CardTitle className="text-xl text-navy">Strategic AI-Readiness Assessment</CardTitle>
+                  <p className="text-coral font-medium mt-2">Comprehensive strategic analysis and website transformation roadmap</p>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="body-text mb-4">
-                  Comprehensive AI-compatibility analysis of up to 100 pages, focusing on fundamental AI-readiness factors that impact your visibility across AI platforms.
+                  Custom strategic assessment, competitive analysis, and transformation roadmap development based on our proprietary AI-Readiness Framework.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Comprehensive AI-compatibility analysis of up to 100 pages</span>
+                    <span className="text-sm text-navy/70">Proprietary five-dimension AI-readiness evaluation</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Voice search optimization assessment</span>
+                    <span className="text-sm text-navy/70">Competitive intelligence and market positioning analysis</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Schema markup evaluation and recommendations</span>
+                    <span className="text-sm text-navy/70">Strategic transformation roadmap development</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Conversational content analysis</span>
+                    <span className="text-sm text-navy/70">Executive stakeholder presentation and guidance</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">AI platform compatibility report</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Detailed action plan with priority rankings</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Email support for implementation questions</span>
+                    <span className="text-sm text-navy/70">Research-backed strategic recommendations</span>
                   </li>
                 </ul>
+                <div className="text-center mb-4">
+                  <p className="text-navy/60 text-sm">Investment varies based on scope and strategic objectives</p>
+                </div>
                 <Button className="w-full btn-primary">
                   <Link href="/contact">
-                    Get Started
+                    Schedule Strategic Assessment
                   </Link>
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
 
-            {/* Tier 2 */}
-            <Card className="card hover:shadow-lg transition-shadow border-2 border-deep-teal/20 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-deep-teal text-white">Most Popular</Badge>
-              </div>
+            {/* Service 2 */}
+            <Card className="card hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-deep-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-deep-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <TrendingUp className="h-8 w-8 text-deep-teal" />
                   </div>
-                  <CardTitle className="text-lg text-navy">AI-Readiness Optimization</CardTitle>
-                  <p className="text-deep-teal font-medium mt-2">Ideal for businesses serious about AI optimization</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-navy mb-2">$1,497</div>
-                  <Badge variant="outline" className="mt-2 border-deep-teal/20 text-deep-teal">
-                    7-10 business days
-                  </Badge>
+                  <CardTitle className="text-xl text-navy">Competitive Intelligence & Positioning</CardTitle>
+                  <p className="text-deep-teal font-medium mt-2">Strategic market positioning for AI transformation leadership</p>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="body-text mb-4">
-                  Everything in AI-Readiness Audit plus comprehensive optimization implementation and strategic guidance.
+                  Competitive advantage development, market positioning analysis, and strategic guidance for AI transformation leadership.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Everything in AI-Readiness Audit PLUS:</span>
+                    <span className="text-sm text-navy/70">Comprehensive competitive landscape analysis</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Custom schema markup implementation</span>
+                    <span className="text-sm text-navy/70">Strategic market positioning development</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Voice search content optimization</span>
+                    <span className="text-sm text-navy/70">AI transformation leadership strategy</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Technical AI-readiness improvements</span>
+                    <span className="text-sm text-navy/70">Competitive advantage identification and development</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Competitive AI analysis and positioning</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Content strategy for conversational queries</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Performance monitoring setup</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Strategic support and consultation</span>
+                    <span className="text-sm text-navy/70">Strategic guidance for sustainable market leadership</span>
                   </li>
                 </ul>
+                <div className="text-center mb-4">
+                  <p className="text-navy/60 text-sm">Investment varies based on scope and strategic objectives</p>
+                </div>
                 <Button className="w-full btn-secondary">
-                  Buy Now
+                  <Link href="/contact">
+                  Discuss Strategic Positioning
                   <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 mt-8">
+            {/* Service 3 */}
+            <Card className="card hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="text-center mb-4">
+                  <div className="w-16 h-16 bg-soft-gold/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Settings className="h-8 w-8 text-soft-gold" />
+                  </div>
+                  <CardTitle className="text-xl text-navy">Technical Implementation Strategy</CardTitle>
+                  <p className="text-soft-gold font-medium mt-2">Dual-audience website optimization and technical transformation</p>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="body-text mb-4">
+                  Technical architecture optimization, implementation guidance, and performance enhancement for dual-audience effectiveness.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-navy/70">Dual-audience technical architecture design</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-navy/70">Technical optimization that ensures AI agents can effectively understand your business</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-navy/70">Performance optimization for machine accessibility</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-navy/70">Implementation partnership and ongoing technical guidance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-navy/70">Continuous performance monitoring and optimization</span>
+                  </li>
+                </ul>
+                <div className="text-center mb-4">
+                  <p className="text-navy/60 text-sm">Investment varies based on scope and strategic objectives</p>
+                </div>
+                <Button className="w-full btn-primary">
+                  <Link href="/contact">
+                  Schedule Technical Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
 
-            {/* Tier 3 */}
-            <Card className="card hover:shadow-lg transition-shadow border-2 border-soft-gold/20 relative">
+            {/* Service 4 */}
+            <Card className="card hover:shadow-lg transition-shadow border-2 border-coral/20 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-soft-gold text-white">Best Value</Badge>
+                <Badge className="bg-coral text-white">Strategic Partnership</Badge>
               </div>
               <CardHeader>
                 <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-soft-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Target className="h-8 w-8 text-soft-gold" />
+                  <div className="w-16 h-16 bg-coral/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Users className="h-8 w-8 text-coral" />
                   </div>
-                  <CardTitle className="text-lg text-navy">AI-Readiness Transformation</CardTitle>
-                  <p className="text-soft-gold font-medium mt-2">For organizations requiring comprehensive AI transformation support</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-navy mb-2">$3,497</div>
-                  <Badge variant="outline" className="mt-2 border-soft-gold/20 text-soft-gold">
-                    14-21 business days
-                  </Badge>
+                  <CardTitle className="text-xl text-navy">Strategic Partnership Program</CardTitle>
+                  <p className="text-coral font-medium mt-2">Long-term strategic advisory and website repositioning partnership</p>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="body-text mb-4">
-                  Everything in AI-Readiness Optimization plus advanced implementation and comprehensive strategic partnership.
+                  Executive advisory, continuous optimization, and strategic guidance for sustained competitive advantage in the AI-driven future.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Everything in AI-Readiness Optimization PLUS:</span>
+                    <span className="text-sm text-navy/70">Executive-level strategic advisory relationship</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Advanced technical implementation</span>
+                    <span className="text-sm text-navy/70">Continuous competitive advantage development</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Multi-platform AI optimization strategy</span>
+                    <span className="text-sm text-navy/70">Priority access to proprietary research and frameworks</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Custom AI-readiness roadmap development</span>
+                    <span className="text-sm text-navy/70">Ongoing strategic optimization and market intelligence</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Executive stakeholder presentation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Competitive intelligence and market analysis</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Priority access to emerging AI technologies</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-navy/70">Strategic partnership and optimization</span>
+                    <span className="text-sm text-navy/70">Long-term partnership for sustained competitive advantage</span>
                   </li>
                 </ul>
+                <div className="text-center mb-4">
+                  <p className="text-navy/60 text-sm">Investment varies based on scope and strategic objectives</p>
+                </div>
                 <Button className="w-full btn-primary">
-                  Buy Now
+                  <Link href="/contact">
+                  Explore Partnership Options
                   <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -484,19 +496,19 @@ export default function ServicesPage() {
           
           {/* Enterprise Callout */}
           <div className="mt-12">
-            <Card className="card border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-white">
+            <Card className="card border-2 border-deep-teal/20 bg-gradient-to-br from-deep-teal/5 to-white">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-purple-600" />
+                <div className="w-16 h-16 bg-deep-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Building className="h-8 w-8 text-deep-teal" />
                 </div>
-                <h3 className="text-2xl font-bold text-navy mb-4">Need Something More Custom?</h3>
+                <h3 className="text-2xl font-bold text-navy mb-4">Executive Advisory & Strategic Partnership</h3>
                 <p className="body-text mb-6 max-w-2xl mx-auto">
-                  For large organizations requiring bespoke AI strategies, multi-domain optimization, or dedicated account management, we offer custom enterprise solutions tailored to your specific needs.
+                  For organizations committed to AI transformation leadership, we provide executive-level strategic advisory and long-term partnership relationships that deliver sustained competitive advantage.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact">
-                    <Button className="bg-purple-600 text-white hover:bg-purple-700">
-                      Discuss Enterprise Needs
+                    <Button className="bg-deep-teal text-white hover:bg-deep-teal/90">
+                      Schedule Executive Consultation
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -507,16 +519,57 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Research-Backed Expertise */}
+      <section className="py-16 bg-gradient-to-br from-coral/5 via-white to-deep-teal/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 badge-coral">
+              Research-Backed Expertise
+            </Badge>
+            <h2 className="mb-4">
+              Proprietary Frameworks Based on Comprehensive Research
+            </h2>
+            <p className="body-text max-w-3xl mx-auto">
+              Our website strategies are based on extensive research and proprietary frameworks developed through comprehensive analysis of AI transformation dynamics and competitive positioning requirements.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-deep-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-deep-teal" />
+              </div>
+              <h3 className="text-lg font-semibold text-navy mb-2">Proprietary Assessment Framework</h3>
+              <p className="text-sm text-navy/70">Five-dimension evaluation methodology</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-soft-gold/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-soft-gold" />
+              </div>
+              <h3 className="text-lg font-semibold text-navy mb-2">Dual-Audience Optimization</h3>
+              <p className="text-sm text-navy/70">Exclusive methodology for serving humans and AI</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-coral/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <BarChart3 className="h-8 w-8 text-coral" />
+              </div>
+              <h3 className="text-lg font-semibold text-navy mb-2">Research-Backed Intelligence</h3>
+              <p className="text-sm text-navy/70">Competitive intelligence and market analysis</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Process Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="mb-4">
-              Our Proven Methodology Delivers Consistent AI-Readiness Results
+              Strategic Partnership Process
             </h2>
             <p className="body-text max-w-3xl mx-auto">
-              We've refined our AI-Readiness optimization process through years of experience helping businesses across all industries prepare for the AI-driven future.
+              Our streamlined strategic partnership approach ensures comprehensive transformation and sustained competitive advantage development.
             </p>
           </div>
           
@@ -524,23 +577,23 @@ export default function ServicesPage() {
             {[
               {
                 step: "01",
-                title: "Comprehensive AI-Readiness Discovery",
-                description: "Understanding your business goals and current AI-Readiness position through comprehensive analysis of your digital presence and competitive environment."
+                title: "Strategic Discovery",
+                description: "Understanding your competitive environment and transformation objectives through comprehensive strategic analysis."
               },
               {
                 step: "02", 
-                title: "Custom AI Optimization Strategy",
-                description: "Developing tailored AI-Readiness strategies specifically for your business objectives, target audience, and competitive environment."
+                title: "Bespoke Strategy Development",
+                description: "Custom website solutions designed for your specific business challenges and competitive positioning requirements."
               },
               {
                 step: "03",
-                title: "Expert Implementation Guidance", 
-                description: "Guiding successful execution of AI-Readiness optimizations with detailed guidance and ongoing consultation."
+                title: "Implementation Partnership", 
+                description: "Strategic guidance and support throughout transformation with ongoing consultation and optimization."
               },
               {
                 step: "04",
-                title: "Continuous AI Performance Monitoring",
-                description: "Ensuring sustained AI-Readiness performance and competitive advantage through continuous monitoring and strategic updates."
+                title: "Ongoing Strategic Advisory",
+                description: "Continuous optimization and competitive advantage development through long-term strategic partnership."
               }
             ].map((step, index) => (
               <div key={index} className="text-center">
@@ -561,44 +614,44 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="mb-4">
-              Why Choose Verbost for Your AI-Readiness Transformation?
+              Strategic Partnership Advantages
             </h2>
             <p className="body-text max-w-3xl mx-auto">
-              Unlike agencies that offer multiple services, we concentrate exclusively on AI-Readiness optimization, ensuring you receive the most advanced strategies available.
+              Our unique combination of exclusive specialization, proprietary research, and strategic partnership approach delivers sustained competitive advantage.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Zap className="h-8 w-8 text-coral" />,
-                title: "Exclusive AI-Readiness Specialization",
-                description: "Unlike agencies that offer multiple services, we concentrate exclusively on AI-Readiness optimization, ensuring you receive the most advanced strategies available."
+                icon: <Users className="h-8 w-8 text-coral" />,
+                title: "Strategic Partnership Approach",
+                description: "Long-term strategic relationships, not project-based vendor services. We become your dedicated website AI transformation partner."
               },
               {
-                icon: <Users className="h-8 w-8 text-deep-teal" />,
-                title: "Proven Methodology and Measurable Results", 
-                description: "Our AI-Readiness optimization methodology has been refined through years of experience and hundreds of successful implementations across all business sizes."
+                icon: <FileText className="h-8 w-8 text-deep-teal" />,
+                title: "Proprietary Research & Frameworks", 
+                description: "Access to exclusive AI-readiness methodologies and research insights unavailable elsewhere in the market."
               },
               {
-                icon: <TrendingUp className="h-8 w-8 text-soft-gold" />,
-                title: "Cutting-Edge Technology and Analytics",
-                description: "We stay ahead of emerging AI technologies, ensuring you receive the most sophisticated optimization strategies available."
+                icon: <Target className="h-8 w-8 text-soft-gold" />,
+                title: "Bespoke Solution Architecture",
+                description: "Custom website strategies designed for your specific competitive environment and business transformation objectives."
               },
               {
-                icon: <Shield className="h-8 w-8 text-coral" />,
-                title: "Ongoing Support and Continuous Optimization",
-                description: "AI platforms evolve rapidly, and we provide continuous support, regular performance monitoring, and strategic updates to maintain your competitive advantage."
+                icon: <TrendingUp className="h-8 w-8 text-coral" />,
+                title: "Business Outcome Focus",
+                description: "Competitive advantage development and strategic positioning, not just technical deliverables or optimization metrics."
               },
               {
-                icon: <Target className="h-8 w-8 text-deep-teal" />,
-                title: "Transparent Communication and Partnership",
-                description: "We believe in transparent communication, clear reporting, and genuine partnership. You'll always understand what we're doing and what results to expect."
+                icon: <Shield className="h-8 w-8 text-deep-teal" />,
+                title: "Research-Backed Methodologies",
+                description: "All strategies based on comprehensive research, emerging technology and trends, and proprietary competitive intelligence."
               },
               {
                 icon: <Lightbulb className="h-8 w-8 text-soft-gold" />,
-                title: "Future-Proof Strategies",
-                description: "Our strategies are designed for both current AI platforms and emerging technologies, ensuring your optimization investment delivers long-term value."
+                title: "Exclusive AI-Readiness Specialization",
+                description: "Unlike agencies that offer multiple services, we concentrate exclusively on AI-readiness transformation and strategic positioning."
               }
             ].map((item, index) => (
               <div key={index} className="text-center">

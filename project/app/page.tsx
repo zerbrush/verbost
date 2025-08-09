@@ -307,14 +307,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge className="mb-4 badge-coral">
-              Built for the AI Future
+              Future-ready
             </Badge>
             <h1 className="mb-6">
               Optimize Your Website for the{' '}
               <span className="text-coral">AI Future</span>
             </h1>
             <p className="body-text mb-8 max-w-3xl mx-auto">
-              AI-driven website assessments, CX and content strategy, and  to ensure your business thrives in AI platforms
+              AI-driven website assessments, CX and content strategy, and technical expertise to ensure your website thrives in AI platforms
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/assessment">
@@ -488,18 +488,55 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="card hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="mb-4">{feature.icon}</div>
-                  <CardTitle className="text-xl text-navy">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="body-text">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-coral/10 rounded-lg flex items-center justify-center">
+                  <Award className="h-6 w-6 text-coral" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-navy mb-2">AI-First Methodology</h3>
+                  <p className="body-text">Unlike traditional agencies that treat AI optimization as an add-on, our entire approach is designed around AI agent behavior and requirements for the post-search web.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-soft-gold/10 rounded-lg flex items-center justify-center">
+                  <Users className="h-6 w-6 text-soft-gold" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-navy mb-2">Dual-Audience Expertise</h3>
+                  <p className="body-text">We're the agency that understands how to serve both human users and AI agents effectively, creating websites that excel in both experiences.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-deep-teal/10 rounded-lg flex items-center justify-center">
+                  <TrendingUp className="h-6 w-6 text-deep-teal" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-navy mb-2">Expert CX Strategists</h3>
+                  <p className="body-text">Professional content and user experience optimization from industry experts who have crafted successful strategies for global leaders and emerging brands alike.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-coral/5 to-deep-teal/5 rounded-2xl p-8">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-coral rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-navy mb-4">Ready to Get Started?</h3>
+                <p className="body-text mb-6">
+                  Join hundreds of businesses that have transformed their online presence
+                </p>
+                <Link href="/assessment">
+                  <Button size="lg" className="btn-primary">
+                    Get Free Assessment
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
