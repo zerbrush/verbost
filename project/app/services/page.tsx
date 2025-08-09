@@ -332,12 +332,12 @@ export default function ServicesPage() {
                 <div className="text-center mb-4">
                   <p className="text-navy/60 text-sm">Investment varies based on scope and strategic objectives</p>
                 </div>
+                <Link href="/contact">
                 <Button className="w-full btn-primary">
-                  <Link href="/contact">
                     Schedule Strategic Assessment
-                  </Link>
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -381,12 +381,12 @@ export default function ServicesPage() {
                 <div className="text-center mb-4">
                   <p className="text-navy/60 text-sm">Investment varies based on scope and strategic objectives</p>
                 </div>
+                <Link href="/contact">
                 <Button className="w-full btn-secondary">
-                  <Link href="/contact">
                   Discuss Strategic Positioning
                   <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
                 </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
@@ -432,12 +432,12 @@ export default function ServicesPage() {
                 <div className="text-center mb-4">
                   <p className="text-navy/60 text-sm">Investment varies based on scope and strategic objectives</p>
                 </div>
+                <Link href="/contact">
                 <Button className="w-full btn-primary">
-                  <Link href="/contact">
                   Schedule Technical Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
                 </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -484,12 +484,12 @@ export default function ServicesPage() {
                 <div className="text-center mb-4">
                   <p className="text-navy/60 text-sm">Investment varies based on scope and strategic objectives</p>
                 </div>
+                <Link href="/contact">
                 <Button className="w-full btn-primary">
-                  <Link href="/contact">
                   Explore Partnership Options
                   <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
                 </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
