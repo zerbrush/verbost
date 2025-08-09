@@ -10,7 +10,7 @@ if (!sendgridApiKey) {
 }
 
 const FROM_EMAIL = 'report@verbost.ai';
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'hmzerbe@gmail.com';
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'hank.zerbe@verbost.ai';
 
 export interface AssessmentEmailData {
   userEmail: string;
