@@ -270,29 +270,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            {contactInfo.map((info, index) => (
-              <Card key={index} className="card hover:shadow-lg transition-shadow text-center">
-                <CardHeader>
-                  <div className="mx-auto mb-4">{info.icon}</div>
-                  <CardTitle className="text-lg text-navy">{info.title}</CardTitle>
-                  <CardDescription className="secondary-text">{info.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="font-semibold text-navy mb-4">{info.contact}</p>
-                  <Button variant="outline" size="sm" className="w-full btn-outline">
-                    {info.action}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Form and Lead Magnets */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
