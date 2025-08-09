@@ -481,7 +481,6 @@ export default function ContactPage() {
               </p>
               <div className="flex items-center space-x-2 text-white/70">
                 <Headphones className="h-4 w-4" />
-                <span className="text-sm">24/7 Support Available</span>
               </div>
             </div>
             
