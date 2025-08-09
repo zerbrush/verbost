@@ -32,9 +32,7 @@ export default function ContactPage() {
     company: '',
     phone: '',
     website: '',
-    message: '',
-    service: '',
-    budget: ''
+    message: ''
   });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -75,9 +73,7 @@ export default function ContactPage() {
         company: '',
         phone: '',
         website: '',
-        message: '',
-        service: '',
-        budget: ''
+        message: ''
       });
       
     } catch (err: any) {

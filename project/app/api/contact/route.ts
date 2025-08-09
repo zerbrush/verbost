@@ -22,9 +22,7 @@ export async function POST(request: NextRequest) {
       company: formData.company?.trim(),
       phone: formData.phone?.trim(),
       website: formData.website?.trim(),
-      message: message.trim(),
-      service: formData.service?.trim(),
-      budget: formData.budget?.trim()
+      message: message.trim()
     });
 
     if (!emailResult.success) {
