@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Poppins, Roboto } from 'next/font/google';
+import Script from 'next/script'; 
 
 
 const poppins = Poppins({ 
@@ -14,21 +15,6 @@ const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
   variable: '--font-roboto'
 });
-
-import { GoogleAnalytics } from '@next/third-parties/google'
- 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-      <GoogleAnalytics gaId="G-BJZ9CPCGBK" />
-    </html>
-  )
-}
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://verbost.ai'),
@@ -80,6 +66,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BJZ9CPCGBK"></Script>
+        <Script id="google-analytics">
+          {
+            '
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BJZ9CPCGBK');
+            '
+          }
+        </Script>
+      </head>
       <body className={`${poppins.variable} ${roboto.variable} font-poppins`}>
         {children}
       </body>
