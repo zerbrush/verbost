@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Poppins, Roboto } from 'next/font/google';
 
+
 const poppins = Poppins({ 
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
@@ -14,11 +15,26 @@ const roboto = Roboto({
   variable: '--font-roboto'
 });
 
+import { GoogleAnalytics } from '@next/third-parties/google'
+ 
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+      <GoogleAnalytics gaId="G-BJZ9CPCGBK" />
+    </html>
+  )
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://verbost.ai'),
   title: 'Verbost.ai - AI-Driven Website Optimization Agency',
-  description: 'The agency built for the AI future. AI-driven website assessments, content strategy, and ongoing monitoring to ensure your business thrives in search engines and AI platforms.',
-  keywords: 'AI SEO, website optimization, AI-driven content, search engine optimization, website assessment, MCP server hosting, digital marketing agency',
+  description: 'Building the web for the AI future. AI-vulnerability website assessments, CX and content strategy, and optimizing your website to ensure your business thrives in search engines and AI platforms.',
+  keywords: 'AI SEO, website optimization, AI-first content, search engine optimization, website assessment, MCP server hosting, digital marketing agency',
   authors: [{ name: 'Verbost.ai Team' }],
   creator: 'Verbost.ai',
   publisher: 'Verbost.ai',
