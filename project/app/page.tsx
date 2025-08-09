@@ -131,28 +131,25 @@ export default function HomePage() {
     }
   ];
 
-  const steps = [
+  const faqs = [
     {
-      number: "01",
-      title: "Submit Website for Analysis",
-      description: "Enter your website URL for comprehensive analysis of your digital presence."
+      question: "How do I know if AI is affecting my website traffic?",
+      answer: "AI impact often appears as declining organic traffic despite maintained rankings, reduced click-through rates, and difficulty attributing traffic sources. Our free assessment can identify specific AI impacts on your traffic."
     },
     {
-      number: "02",
-      title: "Receive Detailed Report",
-      description: "Get comprehensive insights on performance, SEO health, and optimization opportunities."
+      question: "What makes Verbost different from traditional SEO agencies?",
+      answer: "Traditional SEO agencies optimize for human search behavior using decades-old strategies. Verbost optimizes for AI agent behavior using cutting-edge frameworks designed specifically for the post-search web."
     },
     {
-      number: "03",
-      title: "Implement Recommendations",
-      description: "Follow our expert recommendations to improve your website's performance and visibility."
+      question: "How quickly can you help if we're experiencing traffic decline?",
+      answer: "Our emergency response protocols can diagnose AI-related traffic issues and implement protective measures within 48 hours for critical situations."
     },
     {
-      number: "04",
-      title: "Monitor & Optimize",
-      description: "Continuous tracking and improvements to maintain peak performance and growth."
+      question: "Do you still optimize for human users?",
+      answer: "Absolutely. Our dual-audience approach ensures optimal experiences for both human users and AI agents simultaneously. You don't have to choose between them."
     }
   ];
+
 
   const testimonials = [
     {
@@ -283,19 +280,19 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge className="mb-4 badge-coral">
-              The Agency Built for the AI Future
+              Built for the AI Future
             </Badge>
             <h1 className="mb-6">
               Optimize Your Website for the{' '}
               <span className="text-coral">AI Future</span>
             </h1>
             <p className="body-text mb-8 max-w-3xl mx-auto">
-              AI-driven website assessments, content strategy, and ongoing monitoring to ensure your business thrives in search engines and AI platforms
+              AI-driven website assessments, CX and content strategy, and  to ensure your business thrives in AI platforms
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link href="/assessment">
                 <Button size="lg" className="btn-primary">
-                  Get Free Website Assessment
+                  Get Free Website AI-Vulnerability Assessment
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -314,7 +311,7 @@ export default function HomePage() {
                   <div>
                     <Input
                       type="url"
-                     placeholder="Enter your domain (e.g., zarbees.com)"
+                     placeholder="Enter your domain (e.g., website.com)"
                       value={assessmentUrl}
                       onChange={handleUrlChange}
                       className="border-gray-300 focus:border-coral focus:ring-coral"
@@ -406,15 +403,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Value Proposition Section */}
+      {/* Urgency/Problem Section */}
+      <section className="py-20 bg-gradient-to-br from-red-50 via-white to-orange-50 border-t border-red-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-red-100 text-red-700 border-red-200">
+              Critical Industry Alert
+            </Badge>
+            <h2 className="mb-6 text-navy">
+              Your Website Traffic Is Disappearing.<br />
+              <span className="text-coral">We've Got the Insights to Turn It Around.</span>
+            </h2>
+            <p className="text-xl text-navy/80 max-w-4xl mx-auto leading-relaxed mb-8">
+              AI-driven changes are reducing website clicks by up to 47%. While your competitors are still catching up, Verbost has the tools and expertise to not just protect your traffic but help you thrive in the AI-powered future.
+            </p>
+            <p className="body-text max-w-3xl mx-auto text-navy/70">
+              AI is reshaping the digital landscape. With AI agents now acting as gatekeepers, traditional SEO and website optimization aren't enough. The businesses that adapt will lead the way—those that don't risk fading into the background.
+
+
+            </p>
+          </div>
+
+          {/* Urgency Drivers */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-navy text-center mb-8">
+              Every Day of Delay Increases Your Competitive Disadvantage
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {urgencyIndicators.map((indicator, index) => (
+                <Card key={index} className="card border-l-4 border-l-red-400">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      {indicator.icon}
+                      <div>
+                        <h4 className="font-semibold text-navy mb-2">{indicator.title}</h4>
+                        <p className="text-sm text-navy/70">{indicator.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution/Positioning Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="mb-4">
-              Why Choose Verbost?
+            <h2 className="mb-6">
+              The Agency Built for the{' '}
+              <span className="text-coral">AI-Driven Future</span>
             </h2>
-            <p className="body-text max-w-3xl mx-auto">
-              We combine cutting-edge AI technology with expert human insight to deliver unparalleled website optimization results
+            <p className="text-xl text-navy/80 max-w-4xl mx-auto leading-relaxed mb-8">
+              While traditional SEO agencies struggle to adapt decades-old strategies to an AI-driven world, Verbost was built from the ground up to solve AI-readiness challenges. We don't retrofit old approaches—we implement cutting-edge frameworks designed specifically for the post-search web.
             </p>
           </div>
           
@@ -430,97 +473,6 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="mb-4">
-              How It Works
-            </h2>
-            <p className="body-text max-w-3xl mx-auto">
-              Our streamlined process ensures you get maximum value from your website optimization journey
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-coral text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto">
-                  {step.number}
-                </div>
-                <h3 className="text-xl font-semibold text-navy mb-2">{step.title}</h3>
-                <p className="body-text">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Overview */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="mb-4">
-              Complete AI Optimization Solutions for Every Business
-            </h2>
-            <p className="body-text max-w-3xl mx-auto">
-              From comprehensive assessments to complete optimization, we provide everything you need to succeed in the AI-driven digital landscape
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-coral/10 rounded-lg flex items-center justify-center">
-                  <Search className="h-6 w-6 text-coral" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-navy mb-2">AI-Powered Assessment</h3>
-                  <p className="body-text">Comprehensive analysis of your website's performance, SEO health, and optimization opportunities.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-soft-gold/10 rounded-lg flex items-center justify-center">
-                  <TrendingUp className="h-6 w-6 text-soft-gold" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-navy mb-2">Expert CX Strategy</h3>
-                  <p className="body-text">Professional content and user experience optimization from industry experts with proven results.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-deep-teal/10 rounded-lg flex items-center justify-center">
-                  <BarChart3 className="h-6 w-6 text-deep-teal" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-navy mb-2">Continuous Monitoring</h3>
-                  <p className="body-text">Ongoing performance tracking and recommendations to ensure sustained growth and optimization.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-coral/5 to-deep-teal/5 rounded-2xl p-8">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-coral rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-navy mb-4">Ready to Get Started?</h3>
-                <p className="body-text mb-6">
-                  Join hundreds of businesses that have transformed their online presence
-                </p>
-                <Link href="/assessment">
-                  <Button size="lg" className="btn-primary">
-                    Get Free Assessment
-                  </Button>
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -551,6 +503,33 @@ export default function HomePage() {
                     <p className="font-semibold text-navy">{testimonial.name}</p>
                     <p className="secondary-text">{testimonial.role}</p>
                   </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="body-text max-w-3xl mx-auto">
+              Get answers to common questions about AI transformation and our services
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {faqs.map((faq, index) => (
+              <Card key={index} className="card">
+                <CardHeader>
+                  <CardTitle className="text-lg text-navy">{faq.question}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="body-text">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}

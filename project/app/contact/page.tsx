@@ -103,7 +103,7 @@ export default function ContactPage() {
       icon: <Clock className="h-6 w-6 text-coral" />,
       title: "Office Hours",
       description: "When we're available",
-      contact: "Mon-Fri: 9AM-6PM PST",
+      contact: "Mon-Fri: 9AM-6PM EST",
       action: "Schedule Call"
     }
   ];
