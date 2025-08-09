@@ -180,13 +180,13 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      name: "Hank Zerbe",
+      name: "Michael Brooks",
       role: "JUICE HAUS",
-      content: "The continuous monitoring service keeps us ahead of algorithm changes. It's like having an AI SEO expert watching our site 24/7.",
+      content: "Verbost's expertise is top-notch. Their big thinking was critical to recalibrating our website strategy for the AI era.",
       rating: 5
     },
     {
-      name: "Jeff Matlock",
+      name: "Sarah Nguyen",
       role: "Thrill Pop",
       content: "Verbost.ai's assessment revealed optimization opportunities we never knew existed.",
       rating: 5
