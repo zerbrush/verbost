@@ -121,18 +121,18 @@ export default function HomePage() {
   const features = [
     {
       icon: <Zap className="h-8 w-8 text-coral" />,
-      title: "Comprehensive AI-Readiness Analysis",
-      description: "Deep-dive analysis using advanced AI algorithms to identify optimization opportunities across voice search, schema markup, and conversational content."
+      title: "AI-First Methodology",
+      description: "Unlike traditional agencies that treat AI optimization as an add-on, our entire approach is designed around AI agent behavior and requirements for the post-search web."
     },
     {
       icon: <Users className="h-8 w-8 text-deep-teal" />,
-      title: "Expert CX Strategy",
-      description: "Professional content and user experience optimization from industry experts with proven results."
+      title: "Dual-Audience Expertise",
+      description: "We're the only agency that understands how to serve both human users and AI agents effectively, creating websites that excel in both experiences."
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-soft-gold" />,
-      title: "Continuous Monitoring",
-      description: "Ongoing performance tracking and recommendations to ensure sustained growth and optimization."
+      title: "Expert CX Strategists",
+      description: "Professional content and user experience optimization from industry experts who have crafted successful strategies for global leaders and emerging brands alike."
     }
   ];
 
