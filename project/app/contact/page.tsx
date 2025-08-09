@@ -388,46 +388,6 @@ export default function ContactPage() {
                       />
                     </div>
                     
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="service" className="block text-sm font-medium text-navy mb-2">
-                          Service Interest
-                        </label>
-                        <select
-                          id="service"
-                          name="service"
-                          value={formData.service}
-                          onChange={handleChange}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-coral focus:border-transparent"
-                        >
-                          <option value="">Select a service</option>
-                          <option value="audit">AI-Readiness Website Audit</option>
-                          <option value="advanced">Advanced AI-Readiness Audit & Strategy</option>
-                          <option value="enterprise">Enterprise AI-Readiness Consultation</option>
-                          <option value="consultation">Not sure - need consultation</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label htmlFor="budget" className="block text-sm font-medium text-navy mb-2">
-                          Budget Range
-                        </label>
-                        <select
-                          id="budget"
-                          name="budget"
-                          value={formData.budget}
-                          onChange={handleChange}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-coral focus:border-transparent"
-                        >
-                          <option value="">Select budget</option>
-                          <option value="under-1k">Under $1,000</option>
-                          <option value="1k-5k">$1,000 - $5,000</option>
-                          <option value="5k-10k">$5,000 - $10,000</option>
-                          <option value="10k-25k">$10,000 - $25,000</option>
-                          <option value="25k-plus">$25,000+</option>
-                        </select>
-                      </div>
-                    </div>
-                    
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-navy mb-2">
                         Message *
