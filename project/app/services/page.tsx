@@ -534,7 +534,7 @@ export default function ServicesPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <div className="text-center">
               <div className="w-16 h-16 bg-deep-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
