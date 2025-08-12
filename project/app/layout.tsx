@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://verbost.ai'),
   title: 'Verbost.ai - AI-Driven Website Optimization Agency',
   description: 'Building the web for the AI future. AI-vulnerability website assessments, CX and content strategy, and optimizing your website to ensure your business thrives in search engines and AI platforms.',
-  keywords: 'AI SEO, website optimization, AI-first content, search engine optimization, website assessment, MCP server hosting, digital marketing agency',
+  keywords: 'AI SEO, AEO, GEO, AI website optimization, AI-first content, LLM optimization, search engine optimization, website assessment, MCP server hosting, digital marketing agency',
   authors: [{ name: 'Verbost.ai Team' }],
   creator: 'Verbost.ai',
   publisher: 'Verbost.ai',
@@ -36,13 +36,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://verbost.ai',
-    title: 'Verbost.ai - AI-Driven Website Optimization Agency',
+    title: 'Website Optimization for the AI Future | Verbost.ai',
     description: 'The agency built for the AI future. AI-driven website assessments, content strategy, and ongoing monitoring to ensure your business thrives in search engines and AI platforms.',
-    siteName: 'Verbost.ai',
+    siteName: 'Verbost',
+    image: '/favicon.ico',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Verbost.ai - AI-Driven Website Optimization Agency',
+    title: 'Website Optimization for the AI Future | Verbost.ai',
     description: 'The agency built for the AI future. AI-driven website assessments, content strategy, and ongoing monitoring to ensure your business thrives in search engines and AI platforms.',
     creator: '@verbostai',
   },
@@ -67,6 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BJZ9CPCGBK"></Script>
         <Script id="google-analytics">
           {`
