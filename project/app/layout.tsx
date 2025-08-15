@@ -79,6 +79,15 @@ export default function RootLayout({
           gtag('config', 'G-BJZ9CPCGBK');
           `}
         </Script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-17464870882"></Script>
+        <Script id="google-ads">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17464870882');
+          `}
+        </Script>
       </head>
       <body className={`${poppins.variable} ${roboto.variable} font-poppins`}>
         {children}
